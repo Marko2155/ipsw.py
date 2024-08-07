@@ -1,2 +1,2 @@
 # ipsw.py
-Allows you to download IPSWs with Python 
+A program that lets you download IPSWs without using a web browser in Python.
