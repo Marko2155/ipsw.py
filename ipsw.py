@@ -27,7 +27,7 @@ else:
             fl2 = fl[0]
             f = fl2["url"]
             print("Downloading iOS/iPadOS " + str(fl2["version"]) + " for iDevice " + str(args.device))
-            urllib.request.urlretrieve(f, "./latest.ipsw")
+            urllib.request.urlretrieve(f, "./" + args.device + " - " + fl2["version"] + ".ipsw")
             print("Done")
     else:
         with open("./temp/temp.json", "r") as temp:
@@ -39,6 +39,6 @@ else:
                     break
             f = fl2["url"]
             print("Downloading iOS/iPadOS " + str(fl2["version"]) + " for iDevice " + str(args.device))
-            urllib.request.urlretrieve(f, "./latest.ipsw")
+            urllib.request.urlretrieve(f, "./" + args.device + " - " + fl2["version"] + ".ipsw")
             print("Done")
     shutil.rmtree("./temp")
